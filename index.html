@@ -254,8 +254,8 @@
     #about {
       border-top: 1px solid var(--border);
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
     }
 
     .about-heading {
@@ -557,7 +557,6 @@
     <canvas id="shader-canvas"></canvas>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-label">Desarrollador / Diseñador</p>
       <h1 class="hero-name">Iván Agustín<br><em>Bravo</em></h1>
       <p class="hero-tagline">Cientifico de Datos, Investigador y Docente
       </p>
@@ -572,22 +571,22 @@
   <section id="about">
     <div>
       <p class="section-label reveal">01 — Sobre mí</p>
-      <h2 class="about-heading reveal">Construyo cosas para <em>la web</em></h2>
+      <h2 class="about-heading reveal">Amor por<br><em>los datos</em></h2>
     </div>
     <div class="about-body reveal">
-      <p>Soy un desarrollador apasionado por crear experiencias digitales que combinen funcionalidad con diseño cuidado.
-        Me interesa el espacio donde la tecnología se vuelve expresiva.</p>
-      <p>Trabajo con equipos pequeños y proyectos propios, siempre buscando la solución más limpia para cada problema.
+      <p>Soy un estudiante de Ciencia de Datos apasionado por la matemática. Me gusta resolver problemas
+        complejos y encontrar patrones en los datos.</p>
+      <p>Actualmente estoy investigando la utilización de Modelos de Lenguaje para la corrección automática de
+        exámenes de comprensión lectora.
+      </p>
+      <p>Entre mis habilidades se encuentran:
       </p>
       <div class="skills-grid">
-        <span class="skill-tag">JavaScript</span>
-        <span class="skill-tag">HTML / CSS</span>
-        <span class="skill-tag">React</span>
-        <span class="skill-tag">Node.js</span>
         <span class="skill-tag">Python</span>
-        <span class="skill-tag">Git</span>
-        <span class="skill-tag">Figma</span>
+        <span class="skill-tag">R</span>
         <span class="skill-tag">SQL</span>
+        <span class="skill-tag">Git</span>
+        <span class="skill-tag">PowerBI</span>
       </div>
     </div>
   </section>
@@ -728,7 +727,7 @@
             float r = band(uv, t, 0.0);
             float g = band(uv, t, 0.01);
             float b = band(uv, t, 0.02);
-            gl_FragColor = vec4(r, g, b, 1.0);
+            gl_FragColor = vec4(r, g * 0.65, b * 0.05, 1.0);
           }
         `
       });
